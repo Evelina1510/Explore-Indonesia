@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+  width: 0 1640px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.explore__title {
+  color: rgb(1, 10, 32);
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  padding-top:127px;
+  padding-bottom: 45px;
+}
+.explore {
+  position: relative;
+  background-image: url("/imgs/explore.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  width: 1920px;
+  height: 2207px;
+}
+
+.explore::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.explore .container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1640px;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.carousel__btn {
+  background: transparent;
+  border: none;
+  color: #000000;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: opacity 0.2s;
+  user-select: none;
+  padding: 0;
+}
+
+.carousel__btn:hover {
+  opacity: 0.6;
+}
+
+
+.carousel__outer {
+  overflow: hidden;
+  flex: 1;
+}
+
+.carousel__track {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.4s ease;
+}
+
+.carousel__slide {
+  flex-shrink: 0;
+  width: calc((100% - 32px) / 3);
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.carousel__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.carousel__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.carousel__dot.active {
+  background: #e63946;
+  transform: scale(1.2);
+}
